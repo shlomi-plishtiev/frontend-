@@ -1,29 +1,27 @@
-
-import { UrlInputForm } from './UrlInputForm';
-import { MetadataList } from './MetadataList';
-import { useState } from 'react';
-// import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
+import { UrlInputForm } from './UrlInputForm'
+import { MetadataList } from './MetadataList'
+import { useState } from 'react'
 
 export function UrlMetadataFetcher() {
-  const [metadata, setMetadata] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [metadata, setMetadata] = useState([])
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleMetadataFetch = (fetchedMetadata) => {
-    setMetadata(fetchedMetadata);
-  };
+    setMetadata(fetchedMetadata)
+  }
 
   const handleError = (error) => {
-    setError(error);
-  };
+    setError(error)
+  }
 
   const handleLoading = (isLoading) => {
-    setLoading(isLoading);
-  };
+    setLoading(isLoading)
+  }
 
   return (
     <div className="url-metadata-fetcher">
-      <h1>URL Metadata Fetcher</h1>
+      <h1 className="header">URL Metadata Fetcher</h1>
       <UrlInputForm
         onMetadataFetch={handleMetadataFetch}
         onError={handleError}
@@ -32,9 +30,9 @@ export function UrlMetadataFetcher() {
 
       {error && <p className="error">{error}</p>}
 
-      <MetadataList metadata={metadata} />
+      <div className="metadata-container">
+        <MetadataList metadata={metadata} />
+      </div>
     </div>
-  );
+  )
 }
-
-
