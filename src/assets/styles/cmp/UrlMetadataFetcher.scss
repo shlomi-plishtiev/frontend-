@@ -1,0 +1,133 @@
+.url-metadata-fetcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f3f3f3d5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Lato-Bold';
+
+    .header {
+        font-size: 2rem;
+        color: #646464;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .metadata-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .url-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #45a049;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 20px;
+
+        &:hover {
+            background-color: #218838;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button[type='submit'] {
+        background-color: #45a049;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 17px;
+        font-family: 'Lato-Bold';
+
+        &:hover {
+            background-color: #218838;
+        }
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .url-metadata-fetcher {
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .metadata-container {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .url-button {
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button[type='submit'] {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .url-metadata-fetcher {
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 1.2rem;
+    }
+
+    .metadata-container {
+        margin-top: 10px;
+    }
+
+    .url-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button[type='submit'] {
+        font-size: 14px;
+    }
+}
